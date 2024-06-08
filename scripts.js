@@ -30,4 +30,11 @@ document.addEventListener("DOMContentLoaded", function() {
         if (e.target !== e.currentTarget) return;
         lightbox.style.display = "none";
     });
+});document.addEventListener("DOMContentLoaded", function() {
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Nachricht gesendet!');
+        // Hier könntest du zusätzlichen Code hinzufügen, um die Nachricht tatsächlich zu senden
+    });
 });

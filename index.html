@@ -6,12 +6,8 @@
     <title>adisproduction4</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        console.log('Prüfe Authentifizierung...');
         if (!sessionStorage.getItem('authenticated')) {
-            console.log('Benutzer nicht authentifiziert, leite zu login.html weiter.');
             window.location.href = 'login.html';
-        } else {
-            console.log('Benutzer authentifiziert.');
         }
     </script>
 </head>
@@ -28,6 +24,18 @@
                 <img src="images/OI3A7456.JPG" alt="Bild 3 Beschreibung" class="gallery-item">
                 <img src="images/OI3A7538.JPG" alt="Bild 4 Beschreibung" class="gallery-item">
             </div>
+        </section>
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Nachricht:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Senden</button>
+            </form>
         </section>
     </main>
     <footer>
