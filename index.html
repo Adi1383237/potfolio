@@ -6,8 +6,12 @@
     <title>adisproduction4</title>
     <link rel="stylesheet" href="styles.css">
     <script>
+        console.log('Prüfe Authentifizierung...');
         if (!sessionStorage.getItem('authenticated')) {
+            console.log('Benutzer nicht authentifiziert, leite zu login.html weiter.');
             window.location.href = 'login.html';
+        } else {
+            console.log('Benutzer authentifiziert.');
         }
     </script>
 </head>
