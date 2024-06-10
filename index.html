@@ -3,40 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>adisproduction4</title>
+    <title>Bildgalerie</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        if (!sessionStorage.getItem('authenticated')) {
-            window.location.href = 'login.html';
-        }
-    </script>
 </head>
 <body>
-    <header>
-        <h1>adisproduction4 - Fotograf & Videograf</h1>
-        <nav>
-            <ul>
-                <li><a href="#portraits">Porträts</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="portraits">
-            <h2>Porträts</h2>
-            <div class="gallery">
-                <img src="images/IMG_0147.jpeg" alt="Porträt 1 Beschreibung" class="gallery-item">
-                <img src="images/IMG_0148.jpeg" alt="Porträt 2 Beschreibung" class="gallery-item">
-                <img src="images/IMG_0150.jpeg" alt="Porträt 3 Beschreibung" class="gallery-item">
-                <img src="images/IMG_2566.jpeg" alt="Porträt 4 Beschreibung" class="gallery-item">
-                <img src="images/OI3A6516.JPG" alt="Porträt 5 Beschreibung" class="gallery-item">
-                <img src="images/OI3A7456.JPG" alt="Porträt 6 Beschreibung" class="gallery-item">
-                <img src="images/OI3A7538.JPG" alt="Porträt 7 Beschreibung" class="gallery-item">
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 adisproduction4. Alle Rechte vorbehalten.</p>
-    </footer>
+    <h1>Bildgalerie</h1>
+    <div class="categories">
+        <button onclick="filterImages('all')">Alle</button>
+        <button onclick="filterImages('portrait')">Porträts</button>
+        <button onclick="filterImages('landscape')">Landschaften</button>
+        <button onclick="filterImages('abstract')">Abstrakt</button>
+    </div>
+    <div class="gallery">
+        <img src="images/IMG_2566.jpeg" alt="Porträt 1" class="portrait">
+        <img src="images/IMG_0150.jpeg" alt="Landschaft 1" class="landscape">
+        <img src="images/OI3A7538.JPG" alt="Abstrakt 1" class="abstract">
+        <img src="images/IMG_0147.jpeg" alt="Porträt 2" class="portrait">
+        <!-- Weitere Bilder hier -->
+    </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
